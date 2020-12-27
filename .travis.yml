@@ -6,15 +6,15 @@ services:
   - docker
 
 before_install:
-  - docker build -t LeeTaeKyun/docker-fullstack-app -f ./frontend/Dockerfile.dev ./frontend
+  - docker build --tag LeeTaeKyun/docker-fullstack-app -f ./frontend/Dockerfile.dev ./frontend
 
 script: 
-  - docker run -e CI=true  LeeTaeKyun/docker-fullstack-app npm run test
+  - docker run -e CI=true LeeTaeKyun/docker-fullstack-app npm run test
 
 after_success:
-  - docker build -t  LeeTaeKyun/docker-frontend ./frontend
-  - docker build -t  LeeTaeKyun/docker-backend ./backend
-  - docker build -t  LeeTaeKyun/docker-nginx ./nginx
+  - docker build -t LeeTaeKyun/docker-frontend ./frontend
+  - docker build -t LeeTaeKyun/docker-backend ./backend
+  - docker build -t LeeTaeKyun/docker-nginx ./nginx
 
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCER_HUB_ID" --password-stdin
 

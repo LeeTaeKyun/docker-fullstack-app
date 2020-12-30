@@ -1,6 +1,5 @@
-# docker-fullstack-app
+# BACKEND 요약
 
-## 도커 테스트진행중
 
 ## BACKEND
 
@@ -24,26 +23,17 @@ npm init 으로 Package.json생성 (server.js로 기본)
   },
 ```
 
-이렇게 여기까지 추가
+## 추가 완료
 
 
-필요한 모듈들 가져오기
+> **server.js**  - 필요한 모듈들 추가 및 소스코드 셋팅
+
+> **db.js**     - mysql 소스코드 셋팅 및 풀
+
+> **server.js** -  API 소스코딩
 
 
+---------------
 
-
-
-
-## FRONTEND
-```js
-백엔드
-```
-
-
-
-## NGINX
-```js
-백엔드
-```
-
-
+> **Dockerfile, Dockerfile.dev** 파일생성 및 소스코딩 
+>> 작성시 **Dev(개발환경)**는 nodemon서버를 이용해 테스트

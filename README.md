@@ -1,33 +1,24 @@
 # docker-fullstack-app
 
-## 도커 테스트진행중
+### 도커는 기본적으로 실행되어야함
+### **docker-compose.yml** 생성 및 작성
 
-## BACKEND
 
-```js
-node.js로 구성
+```
+docker-compose up --build
 ```
 
-이렇게 여기까지 추가
+> .gitignor을  **backend, mysql/mysql_data** 에 넣어줌.
 
-
-필요한 모듈들 가져오기
-
-
-
-
-
-
-## FRONTEND
-```js
-백엔드
+```
+git add .
+git commit -m '메세지'
+git push origin master
 ```
 
 
+ ## travis ci <---> github 연동
 
-## NGINX
-```js
-백엔드
-```
+ > **.travis.yml** 생성 및 소스코드 작성
 
-
+ > elastic Beanstalk를 위한 **.Dockerrun.aws.json** 생성 및 소스코드 작성
